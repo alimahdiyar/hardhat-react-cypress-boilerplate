@@ -21,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +41,10 @@
   },
   "devDependencies": {
     "@ethersproject/contracts": "^5.4.1",
-    "@ethersproject/providers": "^5.4.3"
+    "@ethersproject/experimental": "^5.6.0",
+    "@ethersproject/providers": "^5.4.3",
+    "@ethersproject/wallet": "^5.6.0",
+    "cypress": "^9.6.0",
+    "ethereum-input-data-decoder": "^0.4.1"
   }
 }

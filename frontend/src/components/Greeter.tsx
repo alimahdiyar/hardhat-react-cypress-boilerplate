@@ -1,7 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import { GreeterContext } from "./../hardhat/SymfoniContext";
+import React, {useContext, useEffect, useState} from "react";
+import {GreeterContext} from "./../hardhat/SymfoniContext";
 
-interface Props {}
+interface Props {
+}
 
 export const Greeter: React.FC<Props> = () => {
   const greeter = useContext(GreeterContext);
@@ -33,12 +34,14 @@ export const Greeter: React.FC<Props> = () => {
   };
   return (
     <div>
-      <p>{message}</p>
+      <p data-testid="greeter-message">{message}</p>
       <input
+        data-testid="greeter-input"
         value={inputGreeting}
         onChange={(e) => setInputGreeting(e.target.value)}
       ></input>
-      <button onClick={(e) => handleSetGreeting(e)}>Set greeting</button>
+      <button
+        data-testid="greeter-set" onClick={(e) => handleSetGreeting(e)}>Set greeting</button>
     </div>
   );
 };
